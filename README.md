@@ -1,6 +1,7 @@
 ## Architecture Guides
 
 1. [Kubernetes Architecture Guide](./kubernetes_architecture.md)
+2. [For beginners](https://github.com/Aditya-das-4707-e/kubectl-k8s)
 
 ## Examples with Interview Questions
 
