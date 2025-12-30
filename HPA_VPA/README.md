@@ -7,6 +7,7 @@
 
 - Create 1 virtual machine on AWS with 2 CPU, 4GB of RAM (t2.medium)
 - Setup minikube on it Minikube setup.
+## For HPA
 - Ensure you have the Metrics Server installed in your Minikube cluster to enable HPA. If not already installed, you can install it using:
 ```bash
 minikube addons enable metrics-server
