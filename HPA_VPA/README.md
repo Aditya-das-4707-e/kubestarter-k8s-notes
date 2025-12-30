@@ -74,6 +74,15 @@ cd autoscaler/vertical-pod-autoscaler
 ```bash
 kubectl get pods -n kube-system
 ```
+### Load Test in HPA
+- 1st
+```bash
+kubectl run -i --tty load-generator --image=busybox -n apache /bin/sh
+```
+- 2nd (in busy box shell)
+```bash
+while true; do wget -q -O- http://apache-service.apache.svc.cluster.local; done
+```
 #
 ## What we are going to implement:
 In this demo, we will create an deployment & service files for Apache and with the help of HPA, we will automatically scale the number of pods based on CPU utilization.
