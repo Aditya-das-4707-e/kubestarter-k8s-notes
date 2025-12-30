@@ -38,6 +38,10 @@ kubectl -n kube-system rollout restart deployment metrics-server
 kubectl get pods -n kube-system
 kubectl top nodes
 ```
+- Expose the service
+```bash
+sudo -E kubectl port-forward service/apache-service -n apache 80:80
+```
 - For VPA
 ```bash
 git clone https://github.com/kubernetes/autoscaler.git
