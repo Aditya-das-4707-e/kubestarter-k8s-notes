@@ -74,7 +74,7 @@ cd autoscaler/vertical-pod-autoscaler
 ```bash
 kubectl get pods -n kube-system
 ```
-### Load Test in HPA
+### Load Test in VPA
 - 1st
 ```bash
 kubectl run -i --tty load-generator --image=busybox -n apache /bin/sh
