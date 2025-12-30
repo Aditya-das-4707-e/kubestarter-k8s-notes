@@ -55,6 +55,15 @@ kubectl apply -f hpa.yml
 ```bash
 kubectl get hpa -n apache
 ```
+### Load Test in HPA
+- 1st
+```bash
+kubectl run -i --tty load-generator --image=busybox -n apache /bin/sh
+```
+- 2nd (in busy box shell)
+```bash
+while true; do wget -q -O- http://apache-service.apache.svc.cluster.local; done
+```
 ## For VPA
 ```bash
 git clone https://github.com/kubernetes/autoscaler.git
