@@ -42,6 +42,10 @@ kubectl top nodes
 ```bash
 sudo -E kubectl port-forward service/apache-service -n apache 80:80
 ```
+- Manually scale service
+```bash
+kubectl scale deployment apache-deployment -n apache --replicas=3
+```
 - For VPA
 ```bash
 git clone https://github.com/kubernetes/autoscaler.git
