@@ -172,6 +172,10 @@ kubectl auth can-i delete service -n apache-namespace --as=apache-user
 kubectl auth can-i create deployment -n nginx-namespace --as=apache-user
 ```
 #
+**To check**
+```bash
+kubectl auth can-i get <service_name> --as=apache-user -n <namespace>
+```
 ### Create Test Resources
 
 **Test Apache User Resource Creation:**
